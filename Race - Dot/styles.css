@@ -1,3 +1,13 @@
+/*
+////////////////////////////////////////////////////////////////
+
+							Dot.
+					   Css Style Sheet
+
+////////////////////////////////////////////////////////////////					   
+*/
+
+
 body {
 	background-color: lightgrey;
 	margin: 4% auto;
@@ -96,18 +106,6 @@ button {
     visibility: visible;
     background-color: rgba(18, 177, 18, 0.8)
 }
-/*
-   margin: 0 auto;
-    cursor: pointer;
-    left: 500px;
-    position: relative;
-    top: 23px;
-    height: 50px;
-    width: 100px;
-    border-radius: 75%;
-    color: white;
-    background-color: rgba(18, 177, 18, 0.8);
-*/
 
 .outside {
 	border: 5px grey solid;
@@ -135,7 +133,6 @@ button {
 	width: 96%;
 	padding-left: 2%;
 	padding-right: 2%;
-    /*height: 350px;*/
     height: 280px;
 }
 
@@ -285,10 +282,6 @@ button {
 	z-index: 6;
 }
 
-/*
-//////////////////////////////////////////////////////////
-*/
-
 
 
 
@@ -299,44 +292,11 @@ button {
 
 ////////// Notes
 
--  curser: pointer (or something else); 'is apparently sometihng I can do.'
 
--  Position absolute: Positions itself relative to it's nearest ancestor.
-					  Meaning that is afixes itself to the closest element.
-					  A small Div will bind to a larger Div
-
-	Position relative: Positions object relative to its original position.
-					   Meaning when relative you use top, bottom, left, right
-					   pixels to move the object just a little bit.
-
-- How racetrack Divs are connected to eachother (order of command):
-	.outside (outer most section)
-	.sector (three large divs inside section)
-		id's = #leg1 , #leg2 , #leg3
-	.road (divs that make up the road portion of track)
-		subclass = .upper .lower (because 2 tracks)
-
-- How to set transparency.
 
 ///////////////////////////////////////////////////////////////////////////////
 
 ////////// Snippets
-
-div.relative {
-    position: relative;
-    width: 400px;
-    height: 200px;
-    border: 3px solid #8AC007;
-} 
-
-div.absolute {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 200px;
-    height: 100px;
-    border: 3px solid #8AC007;
-}
 
 
 

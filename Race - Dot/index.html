@@ -25,10 +25,8 @@
 	    			<h2 class="score2">Player 2: 0</h2>
 				</div>
 			</div>
-
 			<button>Undefined</button>
 			<button>Undefined</button>
-
 			<div class="outside">
 
 				<div class="sector" id="p1Track">
@@ -70,78 +68,20 @@
 
 </html>
 
-<!-- Notes -
-	
-//////////////////////////NOTES/////////////////////////////////////////
 
 
 
-	//Track//
-	A series of divs lined up in  row, or square or pattern of whatever. I'd have to figure out how to either merge the divs or transfer the avatar from one div to another when it touches the div i its progress.
 
-	Need to make a square div for each corner. solid black on inside with small solid white border around ajacent edges.
+<!-- 
+///////////////////////////////////////////////////////////////////
 
-	**Remember I need two tracks next to eachother.
+/////////// Notes
 
 
-	//Movement//
-	One thing I could do to accomplish this it to place the avatar on the track in a relative position?? and with a specific keyboard event have the avatar move forward at 5(ish)px (By moving left or right depending on where they are on the track.)
-
-	Look up jQuery for moving objects on keypress. And the objects need to move by pixels across the screen (maybe with float?)
-
-	Research whether or not you can bind objects to another object, to create a starting point. (also try to find a different objevt to use for avatars other than a small circular div).
-
-	Look up whethr or not you can make an object JUMP from one div to another.
-
-	Can I display a div next to a <h_> element? For <h4> & <div>
-
-	//To make road//
-	A way I think I can make the road is give a dashed boarder on the bottom of one track and the thop of the other where thy meet. and take the rest of the borders out all together (maybe).
-
-	!!Change from three divs to cross the screen to just one long thin one. This will make it so that later there needs to be less .js code and I can do the first sector with three divs each P. [One along top, one down side, and one along (close to but not all the way) bottom]
-		**.js thought - look for a function or something that could trigger an event (or alert) when the 1st avatar crosses the line of a div. Some thing like "blue pulls ahead".
-
-	use class="road upper"  for top roads. (later change upper 
-	and class="road lower"  for the bottom.  and lower to p1 and p2)
 
 ////////////////////////////////////////////////////////////////////
 
 /////////// Snippets
-
-<style type="text/css">
-	div.inline { float:left; }		//CSS Portion
-.clearBoth { clear:both; }
-</style>										//Display inline
-<div class="inline">1<br />2<br />3</div>
-<div class="inline">1<br />2<br />3</div>	//HTML
-<div class="inline">1<br />2<br />3</div>
-<br class="clearBoth" /> < !You may not need this!
-
-//header for site
-
-<header>
-	<div class="display">
-    	<h2>Display</h2>
-	</div>
-	<h1><strong>Race</strong></h1>
-  	<div class="display">
-    	<h2>Display</h2>
-	</div>
-</header>
-
-//
-
-<div class="header">
-	<div class="display">
-    	<h2>Display</h2>
-	</div>
-	<div class="title">
-		<h1><strong>Race</strong></h1>
-  	</div>
-  	<div class="display">
-    	<h2>Display</h2>
-	</div>
-</div>
 
 
 
@@ -190,6 +130,4 @@ alternate between keys:
 e.g. instead of typing "j-j-j-j", they have to alternate between two keys: "j-k-j-k-j-k" (in the correct order!).
 
 race against a bot
-
-
-	-->
+-->
