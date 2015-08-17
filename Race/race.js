@@ -1,18 +1,32 @@
 //runs when doc loads
-$( document ).ready(function setScore() {
-	//var p1Wins = 0;
-	//var p2Wins = 0;
+$( document ).ready(function() {
+	$("#keepGoing").on("click", function keepGoing() {
+	$("#guy1").css({"top": "-17px", "left": "-10px"});
+	$("#guy2").css({"top": "-17px", "left": "-10px"});
+});
 
-	/*while ((p1Wins < 20) && (p2Wins < 20)) {
-		if 
-	}*/
+$("#killSwitch").on("click", function killSwitch() {
+	//var mkString = $(".score1").text();
+	//var y = mkString.slice(-1);
+		//y = parseInt(y);
+		y = 0;
+	$(".score1").text("Player 1: " + y);
+
+	//var mkString2 = $(".score2").text();
+	//var x = mkString2.slice(-1);
+		//x = parseInt(x);
+		var x = 0;
+	$(".score2").text("Player 2: " + x);
+
+	$("#guy1").css({"top": "-17px", "left": "-10px"});
+	$("#guy2").css({"top": "-17px", "left": "-10px"});
+});
 })
 
 //Now, make move by keypress
 $(document).on('keypress', function(e) {
 	if ((e.keyCode === 108) || (e.keyCode === 112)) {  // keys 'l' & 'p'      
         moveP1();
-        //getWinner();
 	} else {
 		return; 
 	} 
@@ -21,7 +35,6 @@ $(document).on('keypress', function(e) {
 $(document).on('keypress', function(e) {
 	if ((e.keyCode === 97) || (e.keyCode === 119)) {  // keys 'a' & 'w'      
         moveP2();
-        //getWinner();
 	} else {
 		return;
 	}  
@@ -37,27 +50,21 @@ function moveP1() {
 	z.top=parseInt(z.top);
 	var avLoc = [z.left, z.top];
 
-	if ((avLoc[0] >= 1005) && (avLoc[1] >= 588)) {
-		//var winner = $(".guy1");
-		
+	if ((avLoc[0] >= 1005) && (avLoc[1] >= 570)) {
 		scoreP1();
-		//console.log("Player 1 wins")
 	} else {
 
-		if ((avLoc[0] > 245) && (avLoc[1] > 574)) {
+		if ((avLoc[0] > 245) && (avLoc[1] > 578)) {
 			$("#guy1").css({left: '+=20px'});
 		} else if ((avLoc[0] < 261) && (avLoc[1] > 490)) {
 			$("#guy1").css({top: '+=15px'});
-		} else if (avLoc[1] > 489) {
+		} else if (avLoc[1] > 495) {
 			$("#guy1").css({left: '-=15px'});
 		} else if (avLoc[0] > 1016) {
 			$("#guy1").css({top: '+=10px'});
 		}  else {
 			$("#guy1").css({left: '+=10px'});
 		}
-			//for test
-		console.log(avLoc);
-		console.log(1);
 	}
 };
 
@@ -69,16 +76,13 @@ function moveP2() {
 	z.top=parseInt(z.top);
 	var avLoc2 = [z.left, z.top];
 
-	if ((avLoc2[0] >= 1016) && (avLoc2[1] >= 612)) {
-		//var winner = $(".guy2");
-		
+	if ((avLoc2[0] >= 1016) && (avLoc2[1] >= 590)) {
 		scoreP2();
-		//console.log("Player 2 Wins")
 	} else {
 
-		if ((avLoc2[0] > 215) && (avLoc2[1] > 597)) {
+		if ((avLoc2[0] > 215) && (avLoc2[1] > 612)) {
 			$("#guy2").css({left: '+=20px'});
-		} else if ((avLoc2[0] < 226) && (avLoc2[1] > 470)) {
+		} else if ((avLoc2[0] < 226) && (avLoc2[1] > 467)) {
 			$("#guy2").css({top: '+=15px'});
 		} else if (avLoc2[1] > 467) {
 			$("#guy2").css({left: '-=15px'});
@@ -87,51 +91,28 @@ function moveP2() {
 		}  else {
 			$("#guy2").css({left: '+=10px'});
 		}
-			//for test
-		console.log(avLoc2);
-		console.log(1);
 	}
 };
 
-/*
-function getWinner(winner) {
-	//var winner = winner || (moveP1() || moveP2());
-
-	if (winner === "Player 1") {
-		scorP1()
-		console.log(2);
-		//return (p1Wins + 1);
-	} else if (winner === "Player 2") {
-		scoreP2();
-		console.log(1);
-		//return (p2Wins + 1);
-	}
-}
-*/
-
 function scoreP1() {
 	var mkString = $(".score1").text();
-	console.log(mkString);
 	var y = mkString.slice(-1);
-	console.log(y)
 		y = parseInt(y);
-		console.log(y);
 		y = (y + 1);
-		console.log(y);
-	$(".score1").text("PLayer 2: " + y)
+	$(".score1").text("Player 1: " + y);
+	alert("Player 1 Wins!");
 }
 
 function scoreP2() {
 	var mkString2 = $(".score2").text();
-	console.log(mkString2);
 	var x = mkString2.slice(-1);
-	console.log(x)
 		x = parseInt(x);
-		console.log(x);
 		x = (x + 1);
-		console.log(x);
-	$(".score2").text("Player 2: " + x)
+	$(".score2").text("Player 2: " + x);
+	alert("Player 2 Wins!");
 }
+
+
 
 
 

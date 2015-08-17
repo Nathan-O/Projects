@@ -5,71 +5,67 @@
 
 		<title>Race</title>
 		<link rel="stylesheet" href="styles.css">
-		<!-- maybe need jQuery --> 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="race.js"></script>						<!-- 1.10.2 -->
+		<script src="race.js"></script>						
 
 	</head>
 
 	<body>
-	<div class= 'container'>
-		<div class="header">
-			<!-- Maybe add another container div for pretty purposes -->
-			<div class="display">
-    			<h2 class="score1">Player 1: 0</h2>
+		<div class= 'container'>
+			<div class="header">
+				<div class="display">
+	    			<h2 class="score1">Player 1: 0</h2>
+	    			<button id="keepGoing">Play Again?</button>
+				</div>
+				<div class="title">
+					<h1><strong>Dot.</strong></h1>
+	  			</div>
+	  			<div class="display">
+	  				<button id="killSwitch">Reset</button>
+	    			<h2 class="score2">Player 2: 0</h2>
+				</div>
 			</div>
-			<div class="title">
-				<h1><strong>A Race</strong></h1>
-  			</div>
-  			<div class="display">
-    			<h2 class="score2">Player 2: 0</h2>
-			</div>
-		</div>
 
-		<button>Undefined</button>
-		<button>Undefined</button>
+			<button>Undefined</button>
+			<button>Undefined</button>
 
-		<div class="outside">
+			<div class="outside">
 
-			<div class="sector" id="p1Track">
-				<div class="road upper" id="p1Top">
+				<div class="sector" id="p1Track">
 
-					<div class="piece" id="guy1">
-						<h4>Player 1</h3>
-						<div class="avatar" id="av1"></div>
+					<div class="road upper" id="p1Top">
+						<div class="piece" id="guy1">
+							<h4>Player 1</h3>
+							<div class="avatar" id="av1"></div>
+						</div>
+					</div>
+				
+					<div class="road lower" id="p2Top">
+						<div class="peice" id="guy2">
+							<h4>Player 2</h4>
+							<div class="avatar" id="av2"></div>
+						</div>
 					</div>
 
+					<div class="road upper" id="p1Right"></div>
+
+					<div class="road lower" id="p2Right"></div>
+
+					<div class="road upper" id="p1Mid"></div>
+
+					<div class="road lower" id="p2Mid"></div>
+
+					<div class="road upper" id="p1Left"></div>
+
+					<div class="road lower" id="p2Left"></div>
+
+					<div class="road upper" id="p1Fin"></div>
+
+					<div class="road lower" id="p2Fin"></div>
 				</div>
-			
-				<div class="road lower" id="p2Top">
 
-					<div class="peice" id="guy2">
-						<h4>Player 2</h4>
-						<div class="avatar" id="av2"></div>
-					</div>
-
-				</div>
-
-				<div class="road upper" id="p1Right"></div>
-
-				<div class="road lower" id="p2Right"></div>
-
-				<div class="road upper" id="p1Mid"></div>
-
-				<div class="road lower" id="p2Mid"></div>
-
-				<div class="road upper" id="p1Left"></div>
-
-				<div class="road lower" id="p2Left"></div>
-
-				<div class="road upper" id="p1Fin"></div>
-
-				<div class="road lower" id="p2Fin"></div>
 			</div>
-
 		</div>
-	</div>
-		<p>Html under Divs</p>
 	</body>
 
 </html>

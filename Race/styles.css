@@ -1,6 +1,5 @@
 body {
-	background-color: blue;
-
+	background-color: lightgrey;
 	margin: 4% auto;
 }
 
@@ -12,14 +11,16 @@ body {
 }
 
 .header {
-	border: 3px white solid;
     margin-right: 8%;
     margin-left:  8%;
 }
 .display {
 	width: 30%;
-	border: 1px black solid;
-	display: inline-block;
+    margin: 0px auto;
+    display: inline-block;
+    left: 47px;
+    top: -15px;
+    position: relative;
 }
 
 .title {
@@ -28,8 +29,22 @@ body {
 }
 
 h1 {
-	font-size: 72px;
+	font-size: 80px;
+	margin-left: 60px;
 	text-align: center;
+	font-family: monospace;
+}
+
+h2 {
+	display: inline;
+}
+
+.score1 {
+	margin-left: 10px;
+}
+
+.score2 {
+	margin: 45px;
 }
 
 h4 {
@@ -38,15 +53,65 @@ h4 {
 	z-index: 6;
 }
 
+
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+/* - Cheesey button, Hell yes! - */
 button {
 	display: inline;
-	margin: 0 auto;
-	cursor: crosshair;
+    margin: 0 auto;
+    position: relative;
+    visibility: hidden;
+
+
 }
+
+#killSwitch {
+	margin: 0 auto;
+    cursor: pointer;
+    left: 20px;
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 100px;
+    border-radius: 75%;
+    color: white;
+    visibility: visible;
+    background-color: rgba(18, 177, 18, 0.8)
+}
+
+#keepGoing {
+	margin: 0 auto;
+    cursor: pointer;
+    left: 70px;
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 100px;
+    border-radius: 75%;
+    color: white;
+    visibility: visible;
+    background-color: rgba(18, 177, 18, 0.8)
+}
+/*
+   margin: 0 auto;
+    cursor: pointer;
+    left: 500px;
+    position: relative;
+    top: 23px;
+    height: 50px;
+    width: 100px;
+    border-radius: 75%;
+    color: white;
+    background-color: rgba(18, 177, 18, 0.8);
+*/
 
 .outside {
 	border: 5px grey solid;
-	background-color: lightgrey;
+	background-color: green;
     height: 575px;
     width: 870px;
     z-index: 0;
@@ -75,23 +140,12 @@ button {
 }
 
 #p1Track {
-	background-color: rgba(0, 0, 0,);
-
+	background-color: rgba(0, 0, 0, .5);
 	/* top-left | top-right | bottom-right | bottom-left */
 	border-radius: 10px 10px 10px 10px;
 	border: 3px green solid;
 	padding-top: 3%;
 	padding-bottom: 3%;
-
-}
-
-#p2Track {
-	z-index: 0;
-    background-color: rgba(255, 255, 255, 0);
-   
-    width: 810px;
-    left: 155px;
-    top: 440px;
 }
 
 .road {
