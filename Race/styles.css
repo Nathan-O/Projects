@@ -1,0 +1,298 @@
+body {
+	background-color: blue;
+
+	margin: 4% auto;
+}
+
+.container {
+	width: 1250px;
+	height: 2000px;
+	margin: 0px auto;
+	position: fixed;
+}
+
+.header {
+	border: 3px white solid;
+    margin-right: 8%;
+    margin-left:  8%;
+}
+.display {
+	width: 30%;
+	border: 1px black solid;
+	display: inline-block;
+}
+
+.title {
+	width: 30%;
+	display: inline-block;
+}
+
+h1 {
+	font-size: 72px;
+	text-align: center;
+}
+
+h4 {
+	text-align: center;
+	color: white;
+	z-index: 6;
+}
+
+button {
+	display: inline;
+	margin: 0 auto;
+	cursor: crosshair;
+}
+
+.outside {
+	border: 5px grey solid;
+	background-color: lightgrey;
+    height: 575px;
+    width: 870px;
+    z-index: 0;
+    border-radius: 15px; /* May change to 5px or 10px */
+    margin: 0px auto;
+    margin-top: 4%;
+    padding: 20px;
+}
+
+/*
+////////////////////////////////////
+
+ 	      Roads and Track 
+
+///////////////////////////////////
+*/
+
+.sector {
+	z-index: 1;
+	max-width: 835px;
+	width: 96%;
+	padding-left: 2%;
+	padding-right: 2%;
+    /*height: 350px;*/
+    height: 280px;
+}
+
+#p1Track {
+	background-color: rgba(0, 0, 0,);
+
+	/* top-left | top-right | bottom-right | bottom-left */
+	border-radius: 10px 10px 10px 10px;
+	border: 3px green solid;
+	padding-top: 3%;
+	padding-bottom: 3%;
+
+}
+
+#p2Track {
+	z-index: 0;
+    background-color: rgba(255, 255, 255, 0);
+   
+    width: 810px;
+    left: 155px;
+    top: 440px;
+}
+
+.road {
+	background-color: rgba(0, 0, 0, 0.25);
+	height: 25px;
+	position: relative;
+	z-index: 2;
+
+}
+
+.upper {
+	
+
+}
+
+.lower {
+	z-index: 4;
+}
+
+#p1Top {
+	border-bottom: 3px white dashed;
+}
+
+#p1Right {
+	z-index: 3;
+	width: 25px;
+    height: 116px;
+    float: right;
+    bottom: 28px;
+    border-left: 3px white dashed;
+}
+
+
+#p1Mid {
+	top: 85px;
+	left: 27px;
+	max-width: 808px;
+    border-top: 3px white dashed;
+}
+
+#p1Left {
+	z-index: 3;
+    width: 25px;
+    height: 80px;
+    left: 28px;
+    top: 60px;
+}
+
+#p1Fin {
+	top: -76px;
+    max-width: 808px;
+    left: 27px;
+    border-bottom: 3px white dashed;
+}
+
+#p2Top {
+	max-width: 807px;
+    top: 0px;
+    right: 0px;
+}
+
+#p2Right {
+	width: 25px;
+    height: 80px;
+    top: 0px;
+    float: right;
+    right: 0px;
+}
+
+#p2Mid {
+	top: 32px;
+    left: 0px;
+    max-width: 807px;
+}
+
+#p2Left {
+	width: 25px;
+    z-index: 4;
+    height: 119px;
+    top: -48px;
+    left: 0px;
+    border-right: 3px white dashed;
+}
+
+#p2Fin {
+	top: -76px;
+    left: 0px;
+    max-width: 836px;
+}
+
+/*
+////////////////////////////////
+
+			Avatars
+
+////////////////////////////////
+*/
+
+#guy1 {
+	position: absolute;
+	height: 20px;
+    width: 100px;
+    z-index: 6;
+    top: -17px;
+    left: -10px;
+}
+
+#guy2 {
+	position: absolute;
+	height: 20px;
+    width: 100px;
+    z-index: 6;
+    top: -17px;
+    left: -10px;
+}
+
+.avatar {
+	position: absolute;
+	z-index: 6;
+	height: 10px;
+	width: 10px;
+	left: 86px;
+	bottom: -15px;
+	border-radius: 90px;
+	border: 1px black solid;
+
+}
+
+#av1 {
+	z-index: 6;
+	background-color: orange;
+
+}
+
+#av2 {
+	background-color: pink;
+	z-index: 6;
+}
+
+/*
+//////////////////////////////////////////////////////////
+*/
+
+
+
+
+
+
+/*
+///////////////////////////////////////////////////////////////////////////////
+
+////////// Notes
+
+-  curser: pointer (or something else); 'is apparently sometihng I can do.'
+
+-  Position absolute: Positions itself relative to it's nearest ancestor.
+					  Meaning that is afixes itself to the closest element.
+					  A small Div will bind to a larger Div
+
+	Position relative: Positions object relative to its original position.
+					   Meaning when relative you use top, bottom, left, right
+					   pixels to move the object just a little bit.
+
+- How racetrack Divs are connected to eachother (order of command):
+	.outside (outer most section)
+	.sector (three large divs inside section)
+		id's = #leg1 , #leg2 , #leg3
+	.road (divs that make up the road portion of track)
+		subclass = .upper .lower (because 2 tracks)
+
+- How to set transparency.
+
+///////////////////////////////////////////////////////////////////////////////
+
+////////// Snippets
+
+div.relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #8AC007;
+} 
+
+div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #8AC007;
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+*/
+
+
+
+
+
+
+
+
