@@ -37,10 +37,10 @@ function moveP1() {
 	z.top=parseInt(z.top);
 	var avLoc = [z.left, z.top];
 
-	if ((avLoc[0] >= 1006) && (avLoc[1] >= 589)) {
+	if ((avLoc[0] >= 1005) && (avLoc[1] >= 588)) {
 		//var winner = $(".guy1");
 		
-		return getWinner("Player 1");
+		scoreP1();
 		//console.log("Player 1 wins")
 	} else {
 
@@ -72,7 +72,7 @@ function moveP2() {
 	if ((avLoc2[0] >= 1016) && (avLoc2[1] >= 612)) {
 		//var winner = $(".guy2");
 		
-		return getWinner("Player 2");
+		scoreP2();
 		//console.log("Player 2 Wins")
 	} else {
 
@@ -93,23 +93,45 @@ function moveP2() {
 	}
 };
 
-
+/*
 function getWinner(winner) {
 	//var winner = winner || (moveP1() || moveP2());
 
 	if (winner === "Player 1") {
-		$("#one").show();
+		scorP1()
 		console.log(2);
 		//return (p1Wins + 1);
 	} else if (winner === "Player 2") {
-		$("#two").show();
+		scoreP2();
 		console.log(1);
 		//return (p2Wins + 1);
 	}
 }
+*/
 
-var p1Wins = 0;
-var p2Wins = 0;
+function scoreP1() {
+	var mkString = $(".score1").text();
+	console.log(mkString);
+	var y = mkString.slice(-1);
+	console.log(y)
+		y = parseInt(y);
+		console.log(y);
+		y = (y + 1);
+		console.log(y);
+	$(".score1").text("PLayer 2: " + y)
+}
+
+function scoreP2() {
+	var mkString2 = $(".score2").text();
+	console.log(mkString2);
+	var x = mkString2.slice(-1);
+	console.log(x)
+		x = parseInt(x);
+		console.log(x);
+		x = (x + 1);
+		console.log(x);
+	$(".score2").text("Player 2: " + x)
+}
 
 
 
